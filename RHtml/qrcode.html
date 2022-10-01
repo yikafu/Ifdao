@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+
+.allbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://s3.bmp.ovh/imgs/2022/10/01/36a41a5c90908ea8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    font-size: 0.9em;
+
+}
+
+.codetime{
+    position: fixed;
+    /* background: #e4cfcf87; */
+    width: 76%;
+    height: 5%;
+    top: 8.7%;
+    left: 12%;
+}
+
+div#text{
+    position: fixed;
+    top: 9%;
+    left: 20%;
+    font-size: 17.4px;
+    color: #8dbe86;
+    background: #fdfffc;
+}
+
+span#lx , span#fx{
+    transform: scale(0.8);
+    font-size: 0.9em;
+    position: fixed;
+    top: 47.5%;
+    left: 1.3%;
+}
+
+span#fx{
+    top: 52%;
+}
+
+span#settime1 ,span#settime2{
+    position: relative;
+    left: 16%;
+}
+
+button{
+    position: fixed;
+    width: 17%;
+    height: 7%;
+    opacity: 0;
+}
+    </style> 
+</head>
+
+<body>
+    <div class="allbox">
+        <div class="codetime">
+            <div class="text" id="text"></div>
+        </div>
+        <div class="box2">
+            <span id="lx">开始时间 :<span id="settime1"></span></span>
+            <span id="fx">结束时间 :<span id="settime2"></span></span>
+        </div>
+        <a href="https://yikafu.github.io/Ifdao/RHtml/index.html">
+            <button></button>
+        </a>
+    </div>
+    <script>
+        function RunTime() {
+	        setInterval(RunTime , 1000);
+	        let date = new Date(+new Date() + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
+	        document.getElementById('text').innerText = date ;
+        }
+        RunTime();
+    </script>
+    <script src="https://yikafu.github.io/Ifdao/style/fun1.js"></script>
+</body>
+
+</html>

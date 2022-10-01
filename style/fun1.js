@@ -1,15 +1,20 @@
-function Times() {
+    function Times() {
     let date = new Date();
     let month = date.getMonth() + 1;
     if (month < 10) {
         month = '0' + month;
     }
-    let result1 = date.getFullYear() + '-' + month + '-' + date.getDate() + '\t08:27';
-    let result2 = date.getFullYear() + '-' + month + '-' + date.getDate() + '\t23:34';
+    let day = date.getDate();
+    if (day < 10) {
+        day = '0' + day;
+    }
+    let result1 = date.getFullYear() + '-' + month + '-' + day+ '\t08:27';
+    let result2 = date.getFullYear() + '-' + month + '-' + day + '\t23:34';
+    let result3 = date.getFullYear() + '-' + month + '-' + day + '\t08:34';
     document.getElementById('settime1').innerText = result1;
     document.getElementById('settime2').innerText = result2;
     document.getElementById('settime3').innerText = result1;
-    document.getElementById('settime4').innerText = result2;
+    document.getElementById('settime4').innerText = result3;
 }
 
 function Name() {
