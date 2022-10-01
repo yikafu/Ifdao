@@ -29,11 +29,20 @@
 
 }
 
-button {
+button#index {
     position: fixed;
     width: 76%;
     height: 21%;
     top: 35%;
+    opacity: 0;
+}
+
+button#qrcode{
+    position: fixed;
+    width: 16%;
+    height: 10%;
+    right: 0%;
+    top: 46%;
     opacity: 0;
 }
     </style> 
@@ -42,7 +51,11 @@ button {
 <body>
     <div class="allbox">
         <a href="https://yikafu.github.io/Ifdao/RHtml/p1.html">
-            <button></button>
+            <button id="index"></button>
+        </a>
+
+        <a href="https://yikafu.github.io/Ifdao/RHtml/qrcode.html">
+            <button id="qrcode"></button>
         </a>
     </div>
 </body>
