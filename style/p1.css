@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://s3.bmp.ovh/imgs/2022/10/04/d0b23a301a11bd79.png');
+    background: url('https://s3.bmp.ovh/imgs/2022/10/04/5f4952ab3853310e.png');
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -26,4 +26,26 @@ button {
     height: 20%;
     top: 12%;
     opacity: 0;
+}
+
+div#settime1{
+    position: fixed;
+    top: 22%;
+    left: 24.8%;
+    width: 41%;
+    font-size: 1.1em;
+    height: 2%;
+    color: #1d1d1d;
+    background-color: #ffffff;
+}
+
+div#settime2{
+    position: fixed;
+    top: 25%;
+    left: 24.8%;
+    width: 41%;
+    font-size: 1.1em;
+    height: 2%;
+    color: #1d1d1d;
+    background-color: #ffffff;
 }
