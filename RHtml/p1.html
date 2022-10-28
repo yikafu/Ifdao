@@ -8,45 +8,85 @@
     <title>Document</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-}
+            margin: 0;
+            padding: 0;
+        }
 
 
-.allbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://s3.bmp.ovh/imgs/2022/09/30/7cd7c3c0cc9f94ff.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-position: center 0;
-    font-size: 0.9em;
+        .allbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://s3.bmp.ovh/imgs/2022/09/30/7cd7c3c0cc9f94ff.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-position: center 0;
+            font-size: 0.9em;
 
-}
+        }
 
-button {
-    position: fixed;
-    width: 100%;
-    height: 20%;
-    top: 17%;
-    opacity: 0;
-}
+        button {
+            position: fixed;
+            width: 100%;
+            height: 20%;
+            top: 17%;
+            opacity: 0;
+        }
+
+        div#settime1 {
+            position: fixed;
+            top: 28.7%;
+            left: 17.9%;
+            font-size: 1em;
+            transform: scale(.66);
+            background: #fff;
+        }
+
+        div#settime2 {
+            position: fixed;
+            top: 31.6%;
+            left: 17.9%;
+            font-size: 1em;
+            transform: scale(.66);
+            background: #fff;
+        }
     </style>
 </head>
 
 <body>
     <div class="allbox">
-        
+        <div id="settime1"></div>
+        <div id="settime2"></div>
         <a href="https://yikafu.github.io/Ifdao/RHtml/go.html">
             <button></button>
         </a>
 
     </div>
+    <script>
+        function Times() {
+            let date = new Date();
+            let month = date.getMonth() + 1;
+            if (month < 10) {
+                month = '0' + month;
+            }
+            let day = date.getDate();
+            if (day < 10) {
+                day = '0' + day;
+            }
+            let result1 = date.getFullYear() + '-' + month + '-' + day + '\t08:27';
+            let result2 = date.getFullYear() + '-' + month + '-' + day + '\t23:34';
+            let result3 = date.getFullYear() + '-' + month + '-' + day + '\t08:34';
+            document.getElementById('settime1').innerText = result1;
+            document.getElementById('settime2').innerText = result2;
+            document.getElementById('settime3').innerText = result1;
+            document.getElementById('settime4').innerText = result3;
+        }
+        Times()
+    </script>
 </body>
 
 </html>
